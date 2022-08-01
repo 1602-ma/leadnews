@@ -15,6 +15,7 @@
     <modules>
         <module>leadnews-core-controller</module>
         <module>leadnews-core-feign</module>
+        <module>leadnews-core-knife4j</module>
     </modules>
 
     <dependencies>

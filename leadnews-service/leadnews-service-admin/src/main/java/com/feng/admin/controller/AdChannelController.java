@@ -1,12 +1,8 @@
 package com.feng.admin.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.core.toolkit.StringUtils;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.feng.admin.pojo.AdChannel;
 import com.feng.common.pojo.PageInfo;
-import com.feng.common.pojo.PageResultDto;
+import com.feng.common.pojo.PageRequestDto;
 import com.feng.common.pojo.Result;
 import com.feng.admin.service.AdChannelService;
 import com.feng.common.pojo.StatusCode;
@@ -35,7 +31,7 @@ public class AdChannelController {
      * @return
      */
     @PostMapping("/search")
-    public Result<PageInfo<AdChannel>> searchByPage(@RequestBody PageResultDto<AdChannel> pageRequestDto) {
+    public Result<PageInfo<AdChannel>> searchByPage(@RequestBody PageRequestDto<AdChannel> pageRequestDto) {
         PageInfo<AdChannel> result = adChannelService.searchByPage(pageRequestDto);
         return Result.ok(result);
     }

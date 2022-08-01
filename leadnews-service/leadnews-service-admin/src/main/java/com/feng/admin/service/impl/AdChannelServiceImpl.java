@@ -8,7 +8,7 @@ import com.feng.admin.pojo.AdChannel;
 import com.feng.admin.mapper.AdChannelMapper;
 import com.feng.admin.service.AdChannelService;
 import com.feng.common.pojo.PageInfo;
-import com.feng.common.pojo.PageResultDto;
+import com.feng.common.pojo.PageRequestDto;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -20,7 +20,7 @@ import org.springframework.util.StringUtils;
 public class AdChannelServiceImpl extends ServiceImpl<AdChannelMapper, AdChannel> implements AdChannelService {
 
     @Override
-    public PageInfo<AdChannel> searchByPage(PageResultDto<AdChannel> pageRequestDto) {
+    public PageInfo<AdChannel> searchByPage(PageRequestDto<AdChannel> pageRequestDto) {
         Long page = pageRequestDto.getPage();
         Long size = pageRequestDto.getSize();
         AdChannel body = pageRequestDto.getBody();

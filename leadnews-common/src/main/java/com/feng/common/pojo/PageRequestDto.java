@@ -16,7 +16,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel(description = "分页请求对象")
-public class PageResultDto<T> implements Serializable {
+public class PageRequestDto<T> implements Serializable {
 
     /** 当前页码 */
     @ApiModelProperty(notes = "当前页码")
